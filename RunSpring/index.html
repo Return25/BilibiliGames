@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<title>风叶穿行 - BilibiliGames</title>
+<meta charset="utf-8">
+
+<style>
+body, html {
+	width:100%;
+	height: 100%;
+}
+</style>
+</head>
+<body>
+
+<!-- Code by https://www.bilibili.com/video/BV1bY4y1W7aL?spm_id_from=333.337.search-card.all.click -->
+
+<div id="container"></div>
+
+<!-- <script crossorigin="anonymous" type="text/javascript" src="https://activity.hdslb.com/blackboard/static/20220330/00979505aec5edd6e5c2f8c096fa0f62/odXH9yzdsj.js"></script> -->
+<script>
+	var myGameScript = document.createElement("script");
+	myGameScript.setAttribute("type", "text/javascript");
+	myGameScript.setAttribute("src", "script.b.js");
+	myGameScript.setAttribute("charset", "UTF-8");
+	
+	myGameScript.addEventListener('load', (event) => {
+		var myContainer = document.getElementById("container");
+		var gameInst = new BannerGameSpring2022(myContainer);
+		gameInst.init().then(() => {
+			// gameInst.canvas.focus();
+			// myContainer.focus();
+			// gameInst.lockInput = true;
+			myContainer.children[0].focus();
+			gameInst.start();
+		});
+	});
+	document.body.appendChild(myGameScript);
+</script>
+
+</body>
+</html>
